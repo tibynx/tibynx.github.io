@@ -1,0 +1,371 @@
+:root {
+    /* Generic sizing for the page */
+    --wrapper-height: 80vh;
+    --avatar-max-width: 96px;
+
+    /* Fonts for different elements */
+    --font-family: 'Inter'; /* Font for body */
+    --font-family-header: 'Inter'; /* Font for name and headers */
+    --font-family-sub: 'Inter'; /* Font for subtext and profile description */
+    --font-family-list: 'Inter'; /* Font for card and buttons */
+
+    /* Colors you'll see cascade through the elements */
+    --color-bg: #1A1B1F; /* Color for page body and card background - fallback */
+    --color-icon: #FCD462; /* Color for social icons */
+    --color-text-main: #fff; /* Main text color for name */
+    --color-text-sub: #AEB5C5; /* Subtext color for profile description */
+    --color-text-button: #1A1B1F; /* Button text color */
+    --color-card-text: #fff; /* Card text color */
+    --color-button: #7EA0E5; /* Button background color */
+    --color-button-alt: var(--color-icon); /* Button background color on hover */
+    --color-button-icon: #1A1B1F; /* Button icon color */
+    --color-button-icon-alt: var(--color-button-icon); /* Button icon color on hover */
+}
+
+/* Basic page style resets */
+* {
+    box-sizing: border-box;
+}
+[hidden] {
+    display: none !important;
+}
+
+/* Page structure */
+body {
+    font-family: var(--font-family), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: var(--color-bg);
+    background-image: url("../images/temp_background.webp"); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    padding-top: 3rem;
+    min-height: 100vh;
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background-color: rgba(26, 27, 31, 0.75);
+    border: 1px solid rgba(126, 160, 229, 0.2);
+    border-bottom: none;
+    z-index: 1;
+    min-height: calc(100vh - 3rem);
+    height: 100%;
+    max-width: clamp(500px, 62vw, 580px);
+    width: 100%;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    padding-bottom: 2rem;
+    flex-grow: 1;
+}
+main, .container {
+    position: relative;
+    z-index: 1;
+}
+.wrapper {
+    min-height: var(--wrapper-height);
+    place-items: center;
+    margin: 3rem 1.5rem 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Buttons */
+.btn--remix {
+    font-family: var(--font-family-list), sans-serif;
+    padding: 0.8rem 1.75rem;
+    /*font sizes scaled by viewport https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/*/
+    font-size: clamp(0.9rem, 0.825rem + 0.3333vw, 1rem);
+    line-height: 1rem;
+    font-weight: 400;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    background: var(--color-button);
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--color-text-button);
+    white-space: nowrap;
+    margin-inline: auto 1rem;
+}
+.btn--remix img {
+    position: relative;
+    top: 1px;
+    margin-right: 0.25rem;
+}
+
+
+/* Typography */
+p {
+    margin: 0;
+    line-height: 1.5;
+    font-family: var(--font-family-sub), sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-text-sub);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 2rem 0 0.8rem;
+    font-family: var(--font-family-header), sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-text-main);
+}
+h1 {
+    margin-top: 0.80rem;
+    margin-bottom: 0.35rem;
+    font-size: 1.8rem;
+    display: inline-flex;
+    color: var(--color-text-main);
+    justify-content: center;
+}
+ul > li,
+ol > li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    font-size: clamp(1rem, 0.625rem + 1.6667vw, 1.5rem);
+}
+ul {
+    padding: 0 0 0 18px;
+    margin: 0;
+}
+
+/* Link css */
+a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+    text-decoration: none;
+    color: var(--color-text-main);
+    transition: background 0.15s linear;
+}
+a:hover,
+a:active,
+a:focus {
+    background: var(--color-button);
+}
+
+/* Link list css */
+ul.link-list {
+    padding-left: 0;
+}
+ul.link-list li {
+    font-family: var(--font-family-list), sans-serif;
+    font-weight: 400;
+    list-style: none;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    text-align: center;
+    margin: 0.90rem auto;
+    font-size: clamp(0.7rem, 0.425rem + 1.6667vw, 1rem);
+}
+ul.link-list li a {
+    background: var(--color-button);
+    border-radius: 90rem;
+    min-height: 1.5em;
+    min-width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: background 0.15s linear, color 0.15s linear;
+    position: relative;
+}
+ul.link-list li a:hover,
+ul.link-list li a:focus {
+    background: var(--color-button-alt);
+}
+ul.link-list li a span {
+    padding-inline: 1rem;
+    color: var(--color-text-button);
+}
+ul.link-list li a:hover span,
+ul.link-list li a:focus span {
+    color: var(--color-text-button);
+}
+
+/* Avatar style */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+}
+.avatar {
+    max-width: var(--avatar-max-width);
+    max-height: var(--avatar-max-width);
+    margin: 1rem 0 0.5rem;
+    border-radius: 50%;
+}
+
+/* Social media icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+.social-icons a,
+.social-icons a:link {
+    border-bottom: none;
+    background: transparent;
+    width: auto;
+    height: auto;
+}
+.social-profile-icon {
+    width: 2rem;
+    display: inline-flex;
+    transition: transform 0.15s linear, fill 0.15s linear;
+    stroke: var(--color-icon);
+    fill: none;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.social-profile-icon--filled {
+    fill: var(--color-icon);
+    stroke: none;
+}
+.social-profile-icon--filled path,
+.social-profile-icon--filled circle,
+.social-profile-icon--filled polygon,
+.social-profile-icon--filled rect {
+    stroke: none;
+}
+.social-profile-icon:hover,
+.social-profile-icon:focus {
+    transform: scale(1.1);
+}
+
+/* Video aspect ratio helper */
+.video-wrapper__16-9 iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+/* Card styles */
+.card-container {
+    margin: 0.90rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.15s linear;
+}
+.card-container:hover,
+.card-container:focus {
+    transform: scale(1.01);
+}
+.card {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    background: var(--color-bg);
+    border-radius: 28px;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.card-shadow {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+.card-text {
+    position: absolute;
+    bottom: 18px;
+    left: 24px;
+    color: var(--color-card-text);
+    font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1rem);
+    font-weight: 400;
+    font-family: var(--font-family-list), sans-serif;
+    z-index: 2;
+}
+
+/* Spotify embed styles */
+.spotify-container {
+    width: 100%;
+    /* You can change the height to 80px, 152px, 232px, or 352px */
+    height: 232px;
+    margin: 0.90rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 28px; /* Change this to 12px or 28px */
+}
+
+/* Button icon styles */
+.button-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+    fill: var(--color-button-icon);
+    transition: fill 0.15s linear, stroke 0.15s linear;
+    position: absolute;
+    left: 1rem;
+}
+ul.link-list li a:hover .button-icon,
+ul.link-list li a:focus .button-icon {
+    fill: var(--color-button-icon-alt);
+}
+
+/* Responsive adjustments */
+@media (prefers-reduced-motion: reduce) {
+    .card-container:hover,
+    .card-container:focus,
+    .social-profile-icon:hover,
+    .social-profile-icon:focus {
+        transform: none;
+    }
+}
+@media (max-width: 500px) {
+    main {
+        padding-top: 0;
+    }
+    .container {
+        border: none;
+        border-radius: 0;
+        height: auto;
+        box-shadow: none;
+    }
+}
