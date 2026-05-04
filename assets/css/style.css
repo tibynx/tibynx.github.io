@@ -246,7 +246,7 @@ ul.link-list li a {
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 3.25rem;
     transition: background 0.15s linear, color 0.15s linear;
     position: relative;
 }
@@ -255,8 +255,10 @@ ul.link-list li a:focus {
     background: var(--color-button-alt);
 }
 ul.link-list li a span {
-    padding-inline: 1rem;
+    flex: 1;
+    text-align: center;
     color: var(--color-text-button);
+    padding-inline: 0;
 }
 ul.link-list li a:hover span,
 ul.link-list li a:focus span {
