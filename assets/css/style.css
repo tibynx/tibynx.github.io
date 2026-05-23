@@ -18,6 +18,9 @@
 
     --border-radius-container: 2.2rem;
     --border-radius-button: 2rem;
+    
+    --color-window-btn-bg: #2c465c;
+    --color-window-btn-symbol: rgba(0, 0, 0, 50%);
 }
 
 /* Basic page style resets */
@@ -104,6 +107,60 @@ main {
 main,
 .container {
     position: relative;
+}
+
+
+/* Window controls in top-left corner */
+.window-controls {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    cursor: default;
+    padding: 10px; /* Generous hover area */
+    margin: -10px; /* Offset padding to keep visual alignment exact */
+}
+
+.control-btn {
+    width: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-window-btn-symbol);
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+.control-btn.minimize {
+    background-color: var(--color-window-btn-bg);
+}
+.control-btn.zoom {
+    background-color: var(--color-window-btn-bg);
+}
+.control-btn.close {
+    background-color: var(--color-window-btn-bg);
+}
+
+/* Icons are hidden by default and fade in on hover of the window controls area */
+.window-controls svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+    pointer-events: none; /* Avoid mouse-enter/leave bugs on fast movement */
+}
+
+.window-controls:hover svg {
+    opacity: 1;
+}
+
+/* Micro-animations on hover and active press */
+.control-btn:hover {
+    transform: scale(1.05);
+}
+.control-btn:active {
+    transform: scale(0.92);
 }
 
 
@@ -263,6 +320,9 @@ ul.link-list li a span {
     ul.link-list li a {
         padding: 0.5rem 1.65rem;
         min-height: 3.5rem;
+    }
+    .window-controls {
+        display: none;
     }
 }
 @media (max-width: 576px) {
