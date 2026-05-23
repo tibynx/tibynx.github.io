@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
-    <link rel="preconnect" href="https://gravatar.com" crossorigin> <!-- You can remove this if you don't use gravatar -->
-    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preconnect" href="https://gravatar.com" crossorigin>
     <!-- HTML Meta Tags -->
     <title>Tibynx</title>
     <meta name="description" content="ehehe oops [NULL] 🌌"/>
@@ -41,101 +40,77 @@
     <link rel="icon" href="assets/favicons/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta name="color-scheme" content="dark"/>
-    <meta name="theme-color" content="#4386e2"/>
+    <meta name="theme-color" content="#1c1a1b"/>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.bunny.net/css?family=inter:400,500" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=inter:700" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=fira-code:400" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=pixelify-sans:400" rel="stylesheet" />
+    <link rel="preload" as="image" href="https://gravatar.com/avatar/25c7ecd79f0131b1b20cb0214ae99862.webp?s=800&d=identicon" fetchpriority="high">
 </head>
 <body>
 <main>
     <div class="container">
-        <div class="wrapper">
-            <div id="content" class="content">
-                <div>
-                    <div class="avatar-container">
-                        <!-- You can use any image -- I used gravatar -->
-                        <img src="https://gravatar.com/avatar/25c7ecd79f0131b1b20cb0214ae99862.webp?s=128&d=identicon" class="avatar" alt="profile picture" width="128" height="128" fetchpriority="high"/>
-                    </div>
+        <div class="card-content">
+            <div class="bottom-layout">
+                <div class="info-section">
                     <h1>Tibynx</h1>
-                    <p>I'm just a little guy on the internet.</p>
+                    <p>just a silly dev cat on the internet :3</p>
+                    <div class="social-icons">
+                        <a aria-label="YouTube" title="YouTube" href="https://youtube.com/@tibynx" target="_blank" rel="noopener noreferrer me">
+                            <svg class="social-profile-icon--filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/>
+                            </svg>
+                        </a>
+                        <a aria-label="GitHub" title="GitHub" href="https://github.com/tibynx" target="_blank" rel="noopener noreferrer me">
+                            <svg class="social-profile-icon--filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/>
+                            </svg>
+                        </a>
+                        <a aria-label="Bluesky" title="Bluesky" href="https://bsky.app/profile/tibynx.bsky.social" target="_blank" rel="noopener noreferrer me">
+                            <svg class="social-profile-icon--filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path d="M439.8 358.7C436.5 358.3 433.1 357.9 429.8 357.4C433.2 357.8 436.5 358.3 439.8 358.7zM320 291.1C293.9 240.4 222.9 145.9 156.9 99.3C93.6 54.6 69.5 62.3 53.6 69.5C35.3 77.8 32 105.9 32 122.4C32 138.9 41.1 258 47 277.9C66.5 343.6 136.1 365.8 200.2 358.6C203.5 358.1 206.8 357.7 210.2 357.2C206.9 357.7 203.6 358.2 200.2 358.6C106.3 372.6 22.9 406.8 132.3 528.5C252.6 653.1 297.1 501.8 320 425.1C342.9 501.8 369.2 647.6 505.6 528.5C608 425.1 533.7 372.5 439.8 358.6C436.5 358.2 433.1 357.8 429.8 357.3C433.2 357.7 436.5 358.2 439.8 358.6C503.9 365.7 573.4 343.5 593 277.9C598.9 258 608 139 608 122.4C608 105.8 604.7 77.7 586.4 69.5C570.6 62.4 546.4 54.6 483.2 99.3C417.1 145.9 346.1 240.4 320 291.1z"/>
+                            </svg>
+                        </a>
+                        <a aria-label="X (formerly Twitter)" title="X (formerly Twitter)" href="https://x.com/tibynx" target="_blank" rel="noopener noreferrer me">
+                            <svg class="social-profile-icon--filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/>
+                            </svg>
+                        </a>
+                        <a aria-label="Twitch" title="Twitch" href="https://twitch.tv/tibynx" target="_blank" rel="noopener noreferrer me">
+                            <svg class="social-profile-icon--filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path d="M455.4 167.5L416.8 167.5L416.8 277.2L455.4 277.2L455.4 167.5zM349.2 167L310.6 167L310.6 276.8L349.2 276.8L349.2 167zM185 64L88.5 155.4L88.5 484.6L204.3 484.6L204.3 576L300.8 484.6L378.1 484.6L551.9 320L551.9 64L185 64zM513.3 301.8L436.1 374.9L358.9 374.9L291.3 438.9L291.3 374.9L204.4 374.9L204.4 100.6L513.3 100.6L513.3 301.8z"/>
+                            </svg>
+                        </a>
+                        <a aria-label="Ko-fi" title="Ko-fi" href="https://ko-fi.com/tibynx" target="_blank" rel="noopener noreferrer me">
+                            <svg class="social-profile-icon--filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path d="M313.8 139C403.6 139 426.8 140.1 460.1 143.4C538.2 151.2 583.7 199.4 583.7 268.6L583.7 277.5C583.7 341.8 536.6 394.4 472.9 399.9C467.9 416.5 460.1 433.1 449.6 449.8C425.2 487.5 376.5 535.1 286.7 535.1L269 535.1C195.9 535.1 139.3 503.5 105.5 445.9C75.6 395.5 71.7 339.5 71.7 264.7C71.7 191 116.1 151.1 168.1 144.5C207.4 139.5 256.2 139 313.8 139zM313.8 180.6C253.4 180.6 210.2 181.1 177.5 186.1C131.5 192.8 113.2 218.8 113.2 265.3L113.4 291C114.6 348.3 120.5 388.1 140.9 425.5C167.5 474.8 215.7 493.7 270.6 493.7L287.8 493.7C359.8 493.7 394.8 458.8 414.1 428.3C423.5 412.8 431.8 395.6 436.3 374L439.6 360.2L459.5 360.2C503.8 360.2 542.1 324.2 542.1 278.2L542.1 269.9C542.1 218.4 509.9 191.2 454 184.6C422.4 181.8 403.6 180.7 313.8 180.7zM331 233.2C369.2 233.2 395.8 264.8 395.8 300.2C395.8 332.9 377.5 361.2 353.7 383.3C338.7 398.3 314.4 413.8 297.8 423.8C293.4 426.6 287.8 428.2 281.1 428.2C275.6 428.2 270.6 426.5 265.6 423.8C249 413.8 224.6 398.3 209.1 383.3C187.3 362.5 169.9 336.4 167.8 306.3L167.6 300.2C167.6 264.7 193.1 233.2 231.9 233.2C254.6 233.2 270.7 244.8 281.2 260.9C292.8 244.8 308.4 233.2 331.1 233.2zM453.5 229.3C481.8 229.3 497.3 245.9 497.3 272.5C497.3 299.1 481.8 315.2 453.5 315.2C444.6 315.2 439.7 310.2 439.7 303.5L439.7 240.9C439.7 234.2 444.7 229.3 453.5 229.3z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="social-icons">
-                    <a aria-label="YouTube" title="YouTube" href="https://youtube.com/@tibynx" target="_blank" rel="noopener noreferrer me">
-                        <!-- If you want the icons to be filled, change the class to "social-profile-icon--filled" -->
-                        <svg class="social-profile-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
-                            <path d="m10 15 5-3-5-3z"/>
-                        </svg>
-                    </a>
-                    <a aria-label="GitHub" title="GitHub" href="https://github.com/tibynx" target="_blank" rel="noopener noreferrer me">
-                        <svg class="social-profile-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M12.0091 1C5.92135 1 1 5.95763 1 12.0909C1 16.9936 4.15328 21.1435 8.52772 22.6124C9.07463 22.7228 9.27497 22.3737 9.27497 22.0801C9.27497 21.823 9.25694 20.9416 9.25694 20.0233C6.19447 20.6845 5.55674 18.7012 5.55674 18.7012C5.06458 17.4159 4.33536 17.0855 4.33536 17.0855C3.33302 16.4061 4.40837 16.4061 4.40837 16.4061C5.52024 16.4795 6.10366 17.5445 6.10366 17.5445C7.08775 19.2337 8.67352 18.7564 9.31147 18.4626C9.40251 17.7464 9.69434 17.2507 10.0042 16.9753C7.56165 16.7182 4.9918 15.7634 4.9918 11.5032C4.9918 10.2913 5.42897 9.29976 6.12169 8.52862C6.01239 8.25324 5.62953 7.11456 6.2312 5.59054C6.2312 5.59054 7.16076 5.29669 9.25671 6.729C10.1541 6.48622 11.0795 6.36272 12.0091 6.36168C12.9387 6.36168 13.8862 6.49035 14.7613 6.729C16.8574 5.29669 17.787 5.59054 17.787 5.59054C18.3887 7.11456 18.0056 8.25324 17.8963 8.52862C18.6073 9.29976 19.0264 10.2913 19.0264 11.5032C19.0264 15.7634 16.4565 16.6997 13.9958 16.9753C14.3969 17.3241 14.743 17.9851 14.743 19.0318C14.743 20.5191 14.725 21.7128 14.725 22.0799C14.725 22.3737 14.9255 22.7228 15.4722 22.6126C19.8467 21.1433 23 16.9936 23 12.0909C23.018 5.95763 18.0786 1 12.0091 1Z"/>
-                        </svg>
-                    </a>
-                    <a aria-label="Docker Hub" title="Docker Hub" href="https://hub.docker.com/u/tibynx" target="_blank" rel="noopener noreferrer me">
-                        <svg class="social-profile-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke="none" d="M0 0h24v24H0z"/>
-                            <path d="M22 12.54c-1.804 -.345 -2.701 -1.08 -3.523 -2.94c-.487 .696 -1.102 1.568 -.92 2.4c.028 .238 -.32 1 -.557 1h-14c0 5.208 3.164 7 6.196 7c4.124 .022 7.828 -1.376 9.854 -5c1.146 -.101 2.296 -1.505 2.95 -2.46z"/>
-                            <path d="M5 10h3v3h-3z"/>
-                            <path d="M8 10h3v3h-3z"/>
-                            <path d="M11 10h3v3h-3z"/>
-                            <path d="M8 7h3v3h-3z"/>
-                            <path d="M11 7h3v3h-3z"/>
-                            <path d="M11 4h3v3h-3z"/>
-                        </svg>
-                    </a>
-                    <a aria-label="Bluesky" title="Bluesky" href="https://bsky.app/profile/tibynx.bsky.social" target="_blank" rel="noopener noreferrer me">
-                        <svg class="social-profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke="none" d="M0 0h24v24H0z"/>
-                            <path d="M6.335 5.144c-1.654 -1.199 -4.335 -2.127 -4.335 .826c0 .59 .35 4.953 .556 5.661c.713 2.463 3.13 2.75 5.444 2.369c-4.045 .665 -4.889 3.208 -2.667 5.41c1.03 1.018 1.913 1.59 2.667 1.59c2 0 3.134 -2.769 3.5 -3.5c.333 -.667 .5 -1.167 .5 -1.5c0 .333 .167 .833 .5 1.5c.366 .731 1.5 3.5 3.5 3.5c.754 0 1.637 -.571 2.667 -1.59c2.222 -2.203 1.378 -4.746 -2.667 -5.41c2.314 .38 4.73 .094 5.444 -2.369c.206 -.708 .556 -5.072 .556 -5.661c0 -2.953 -2.68 -2.025 -4.335 -.826c-2.293 1.662 -4.76 5.048 -5.665 6.856c-.905 -1.808 -3.372 -5.194 -5.665 -6.856z"/>
-                        </svg>
-                    </a>
-                    <a aria-label="X (formerly Twitter)" title="X (formerly Twitter)" href="https://x.com/tibynx" target="_blank" rel="noopener noreferrer me">
-                        <svg class="social-profile-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke="none" d="M0 0h24v24H0z"/>
-                            <path d="M4 4l11.733 16h4.267l-11.733 -16z"/>
-                            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/>
-                        </svg>
-                    </a>
-                    <a aria-label="Twitch" title="Twitch" href="https://twitch.tv/tibynx" target="_blank" rel="noopener noreferrer me">
-                        <svg class="social-profile-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"/>
-                        </svg>
-                    </a>
-                    <a aria-label="Ko-fi" title="Ko-fi" href="https://ko-fi.com/tibynx" target="_blank" rel="noopener noreferrer me">
-                        <svg class="social-profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M17 5.5H4c-.943 0-1.414 0-1.707.293S2 6.557 2 7.5v7c0 1.886 0 2.828.586 3.414S4.114 18.5 6 18.5h7c.932 0 1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083C16 16.898 16 16.432 16 15.5h1a5 5 0 0 0 0-10Z"/>
-                            <path d="M17 13h-1V8h1a2.5 2.5 0 0 1 0 5Z"/>
-                            <path stroke-linecap="round" d="M5.586 9.1c.78-.8 2.047-.8 2.828 0L9 9.702l.586-.6a1.964 1.964 0 0 1 2.828 0c.781.8.781 2.098 0 2.899L9 15.5L5.586 12a2.087 2.087 0 0 1 0-2.9" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                </div>
-                <!-- Link with preview card -- uncomment to use -->
-<!--                <div class="card-container">-->
-<!--                    <a aria-label="Website" href="https://example.com" class="card" target="_blank" rel="noopener noreferrer">-->
-<!--                        <img src="https://example.com/preview" alt="preview" loading="lazy" width="1280" height="800">-->
-<!--                        <div class="card-text">This is a very cool title</div>-->
-<!--                        <div class="card-shadow"></div>-->
-<!--                    </a>-->
-<!--                </div>-->
-                <!-- Spotify embed -- uncomment to use -->
-<!--                <iframe class="spotify-container" data-testid="embed-iframe" title="Spotify Embed" src="https://open.spotify.com/embed/track/0SMwMAuN2LHDClArtIyGbV?theme=1" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>-->
                 <ul class="link-list">
                     <li>
                         <a aria-label="Refsheet" href="https://vsona.co/tibynx">
+                            <span>Refsheet</span>
                             <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
                                 <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path d="M512 128C512 92.7 483.3 64 448 64L253.3 64C236.3 64 220 70.7 208 82.7L146.7 144C134.7 156 128 172.3 128 189.3L128 512C128 547.3 156.7 576 192 576L448 576C483.3 576 512 547.3 512 512L512 128zM288 152L288 200C288 213.3 277.3 224 264 224C250.7 224 240 213.3 240 200L240 152C240 138.7 250.7 128 264 128C277.3 128 288 138.7 288 152zM376 152L376 200C376 213.3 365.3 224 352 224C338.7 224 328 213.3 328 200L328 152C328 138.7 338.7 128 352 128C365.3 128 376 138.7 376 152zM464 152L464 200C464 213.3 453.3 224 440 224C426.7 224 416 213.3 416 200L416 152C416 138.7 426.7 128 440 128C453.3 128 464 138.7 464 152z"/>
                             </svg>
-                            <span>Refsheet</span>
                         </a>
                     </li>
                     <li>
                         <a aria-label="Code snippets and notes" href="https://gist.github.com/tibynx">
+                            <span>Snippets</span>
                             <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
                                 <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path d="M160 544C124.7 544 96 515.3 96 480L96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 373.5C544 390.5 537.3 406.8 525.3 418.8L418.7 525.3C406.7 537.3 390.4 544 373.4 544L160 544zM485.5 368L392 368C378.7 368 368 378.7 368 392L368 485.5L485.5 368z"/>
                             </svg>
-                            <span>Snippets and notes</span>
                         </a>
                     </li>
                 </ul>
