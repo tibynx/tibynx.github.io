@@ -183,6 +183,7 @@ h1 {
     font-family: var(--font-family-header), sans-serif;
     font-weight: 700;
     line-height: 0.95;
+    letter-spacing: -0.03em;
     color: var(--color-text-main);
     font-size: 3.8rem;
 }
