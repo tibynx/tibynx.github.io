@@ -20,7 +20,7 @@
     --border-radius-button: 2rem;
     
     --color-window-btn-bg: #2c465c;
-    --color-window-btn-symbol: rgba(0, 0, 0, 50%);
+    --color-window-btn-symbol: rgba(0, 0, 0, 0.5);
 }
 
 /* Basic page style resets */
@@ -115,7 +115,7 @@ main,
 }
 
 
-/* Window controls in top-left corner */
+/* Window controls in top-right corner */
 .window-controls {
     position: absolute;
     top: 1.25rem;
@@ -127,8 +127,8 @@ main,
     padding: 10px; /* Generous hover area */
     margin: -10px; /* Offset padding to keep visual alignment exact */
 }
-
 .control-btn {
+    height: 14px;
     width: 14px;
     border-radius: 50%;
     display: flex;
