@@ -1,9 +1,10 @@
 :root {
-    --font-family: 'Inter';
+    /* Fonts */
     --font-family-header: 'Inter';
     --font-family-sub: 'Fira Code';
     --font-family-list: 'Pixelify Sans';
 
+    /* Colors */
     --color-bg: #000010;
     --color-container-bg: #04172b;
     --color-container-border: #f1f2f2;
@@ -15,16 +16,13 @@
     --color-text-button: #202429;
     --color-button: #f9fafc;
     --color-button-icon: #6ea8e7;
-
-    --border-radius-container: 2.2rem;
-    --border-radius-button: 2rem;
-    
     --color-window-btn-bg: #2c465c;
     --color-window-btn-symbol: rgba(0, 0, 0, 0.5);
 }
 
 /* Basic page style resets */
-* {
+*,
+*::before, *::after{
     box-sizing: border-box;
 }
 [hidden] {
@@ -33,7 +31,7 @@
 
 /* Page structure */
 body {
-    font-family: var(--font-family), sans-serif;
+    font-family: var(--font-family-header), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -80,7 +78,7 @@ main {
     background-size: cover;
     background-position: center 35%;
     border: 8px solid var(--color-container-border);
-    border-radius: var(--border-radius-container);
+    border-radius: 2.2rem;
     overflow: hidden;
     z-index: 1;
 }
@@ -137,7 +135,6 @@ main,
     background-color: var(--color-window-btn-bg);
     transition: background-color 0.15s ease, transform 0.1s ease;
 }
-
 /* Icons are hidden by default and fade in on hover of the window controls area */
 .window-controls svg {
     width: 100%;
@@ -146,11 +143,9 @@ main,
     transition: opacity 0.15s ease-in-out;
     pointer-events: none; /* Avoid mouse-enter/leave bugs on fast movement */
 }
-
 .window-controls:hover svg {
     opacity: 1;
 }
-
 /* Micro-animations on hover and active press */
 .control-btn:hover {
     transform: scale(1.05);
@@ -205,7 +200,7 @@ ul.link-list li {
 }
 ul.link-list li a {
     background: var(--color-button);
-    border-radius: var(--border-radius-button);
+    border-radius: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -224,16 +219,15 @@ ul.link-list li a span {
     color: var(--color-text-button);
 }
 
-
 /* Social media icons */
-.social-icons {
+.social-icon {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     margin-top: 1.85rem;
 }
-.social-icons a {
+.social-icon a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -247,8 +241,8 @@ ul.link-list li a span {
     fill: var(--color-icon);
     stroke: none;
 }
-.social-icons a:hover,
-.social-icons a:focus-visible {
+.social-icon a:hover,
+.social-icon a:focus-visible {
     transform: scale(1.1);
 }
 
@@ -278,7 +272,7 @@ ul.link-list li a span {
         gap: 2.5rem;
         padding: 8vw;
     }
-    .social-icons {
+    .social-icon {
         width: 100%;
         flex-wrap: wrap;
         row-gap: 1rem;
@@ -298,7 +292,7 @@ ul.link-list li a span {
     }
 }
 @media (max-width: 576px) {
-    .social-icons {
+    .social-icon {
         justify-content: center;
     }
 }
