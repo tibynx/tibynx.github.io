@@ -51,7 +51,6 @@ body {
     user-select: none;
 }
 body::before {
-    background-attachment: scroll;
     content: '';
     display: block;
     width: 100%;
@@ -274,8 +273,12 @@ ul.link-list li a span {
 @media (max-width: 736px) {
     .container {
         aspect-ratio: auto;
+        height: auto;
         min-height: min(85vh, 730px);
         background-position: center;
+    }
+    .card-content {
+        min-height: min(85vh, 730px);
     }
     .bottom-layout {
         flex-direction: column;
