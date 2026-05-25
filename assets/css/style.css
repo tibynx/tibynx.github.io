@@ -258,37 +258,17 @@ ul.link-list li a span {
     line-height: 0;
     transition: transform 0.2s ease;
 }
-.social-profile-icon {
-    width: 1.85rem;
-    height: auto;
-    display: inline-flex;
-    stroke: var(--color-icon);
-    fill: none;
-    stroke-width: 1.65;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-.social-profile-icon--filled {
+.social-icon-svg {
     width: 1.85rem;
     height: auto;
     display: inline-flex;
     fill: var(--color-icon);
     stroke: none;
 }
-.social-profile-icon--filled path,
-.social-profile-icon--filled circle,
-.social-profile-icon--filled polygon,
-.social-profile-icon--filled rect {
-    stroke: none;
-}
-.social-profile-icon path[stroke='none'] {
-    fill: none;
-}
 .social-icons a:hover,
 .social-icons a:focus-visible {
     transform: scale(1.1);
 }
-
 
 /* Button icon styles */
 .button-icon {
