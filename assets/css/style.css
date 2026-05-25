@@ -134,16 +134,8 @@ main,
     align-items: center;
     justify-content: center;
     color: var(--color-window-btn-symbol);
+    background-color: var(--color-window-btn-bg);
     transition: background-color 0.15s ease, transform 0.1s ease;
-}
-.control-btn.minimize {
-    background-color: var(--color-window-btn-bg);
-}
-.control-btn.zoom {
-    background-color: var(--color-window-btn-bg);
-}
-.control-btn.close {
-    background-color: var(--color-window-btn-bg);
 }
 
 /* Icons are hidden by default and fade in on hover of the window controls area */
