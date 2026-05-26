@@ -59,11 +59,6 @@ body::before {
     background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    body::before {
-        background-image: none;
-    }
-}
 main {
     display: flex;
     justify-content: center;
@@ -254,6 +249,25 @@ ul.link-list li a span {
     fill: var(--color-button-icon);
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+/* Motion adjustments */
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        background-image: none;
+    }
+    .control-btn,
+     .window-controls svg {
+         transition: none;
+     }
+     .control-btn:hover,
+     .control-btn:active {
+         transform: none;
+     }
+     .window-controls svg,
+     .window-controls:hover svg {
+         opacity: 1;
+     }
 }
 
 /* Responsive adjustments */
