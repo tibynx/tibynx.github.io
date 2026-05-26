@@ -82,7 +82,7 @@ main {
     overflow: hidden;
     z-index: 1;
 }
-.card-content {
+.container-content {
     height: 100%;
     width: 100%;
     display: flex;
@@ -263,7 +263,7 @@ ul.link-list li a span {
         min-height: min(90dvh, 730px);
         background-position: center;
     }
-    .card-content {
+    .container-content {
         min-height: min(90dvh, 730px);
     }
     .bottom-layout {
