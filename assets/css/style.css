@@ -53,7 +53,7 @@ body::before {
     position: fixed;
     top: 0;
     z-index: 0;
-    background-image: url("../../assets/images/cubes_anim.svg");
+    background-image: url("../images/cubes_anim.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
