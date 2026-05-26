@@ -1,14 +1,13 @@
 # 🌐 Website
-My website for socials and links. It was made from the [Glitch in bio](https://github.com/glitchdotcom/glitch-in-bio) project. You can also use this project as a template for your own website.
 
-## Features
-* Responsive design
-* Change colors easily
-* Add your own links and icons
-* Embed Spotify songs, playlists, etc.
-* Ready to host on GitHub Pages, GitLab Pages, or any static hosting service
+My website for socials and links. It uses simple HTML and CSS, and is hosted on GitHub Pages.
 
 ## Icons used
+
 * [Font Awesome](https://fontawesome.com/)
-* [Tabler Icons](https://tabler-icons.io/)
-* [Lucide](https://lucide.dev/)
+
+## Fonts used
+
+* [Inter](https://fonts.google.com/specimen/Inter)
+* [Fira Code](https://fonts.google.com/specimen/Fira+Code)
+* [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans)
