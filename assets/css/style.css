@@ -72,7 +72,7 @@ main {
 .container {
     width: min(100%, 765px);
     height: 50rem;
-    max-height: calc(100vh - (2 * clamp(1rem, 2.8vw, 2.2rem)));
+    max-height: calc(100dvh - (2 * clamp(1rem, 2.8vw, 2.2rem)));
     background-color: var(--color-container-bg);
     background-image: url("https://gravatar.com/avatar/25c7ecd79f0131b1b20cb0214ae99862.webp?s=800&d=identicon");
     background-size: cover;
@@ -260,11 +260,11 @@ ul.link-list li a span {
     .container {
         aspect-ratio: auto;
         height: auto;
-        min-height: min(85vh, 730px);
+        min-height: min(90dvh, 730px);
         background-position: center;
     }
     .card-content {
-        min-height: min(85vh, 730px);
+        min-height: min(90dvh, 730px);
     }
     .bottom-layout {
         flex-direction: column;
