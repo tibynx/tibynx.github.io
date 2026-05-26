@@ -163,5 +163,26 @@
         </div>
     </div>
 </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const closeBtn = document.querySelector('.control-btn.close');
+            if (closeBtn) {
+                let clickCount = 0;
+                let resetTimeout;
+                closeBtn.addEventListener('click', () => {
+                    clickCount++;
+                    clearTimeout(resetTimeout);
+                    if (clickCount >= 10) {
+                        alert("nuh uh");
+                        clickCount = 0;
+                    } else {
+                        resetTimeout = setTimeout(() => {
+                            clickCount = 0;
+                        }, 3000);
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
